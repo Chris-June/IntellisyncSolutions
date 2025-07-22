@@ -25,7 +25,7 @@ export default function TechnologyCapabilities() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-3xl md:text-5xl font-extrabold bg-gradient-to-tr from-accent1 via-cta to-white bg-clip-text text-transparent mb-10 drop-shadow-lg"
+            className="text-3xl pb-4md:text-5xl font-extrabold bg-gradient-to-tr from-accent1 via-cta to-white bg-clip-text text-transparent mb-10 drop-shadow-lg"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -34,8 +34,8 @@ export default function TechnologyCapabilities() {
           </motion.h2>
         </div>
         
-        {/* Top image showcase */}
-        <motion.div
+        {/* Top image showcase --- might remove*/}
+        {/* <motion.div
           className="relative w-full mb-24 overflow-hidden rounded-2xl shadow-xl"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function TechnologyCapabilities() {
               className="object-cover rounded-2xl w-full h-full"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {TECH_CAPABILITIES.map((cap, idx) => (

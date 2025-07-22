@@ -2,11 +2,11 @@
 title: "Death of SEO: The Rise of 'Search Everything' Optimization in the AI Era"
 publishedAt: "2025-05-26"
 author:
-  name: "Christopher June"
-  role: "Strategic Visionary Leader"
-  avatarUrl: "/images/authors/christopher-june.png"
+  name: "Chris June"
+  role: "Founder & Lead AI Architect"
+  avatarUrl: "/assets/images/Chris.jpg"
 excerpt: "Discover why traditional SEO is becoming obsolete and how 'Search Everything Optimization' is taking its place in the age of AI-powered search and chatbots."
-coverImageUrl: "/images/blog/death-of-seo.jpg"
+coverImageUrl: "/assets/images/blog/death-of-seo.png"
 tags: ["SEO", "AI", "DigitalMarketing", "SearchEngines", "ContentStrategy", "LLMO", "SearchEverythingOptimization"]
 readTime: 15
 whyItMatters: "As AI reshapes how people find information online, understanding the shift from traditional SEO to multi-platform search optimization is crucial for maintaining online visibility and relevance."

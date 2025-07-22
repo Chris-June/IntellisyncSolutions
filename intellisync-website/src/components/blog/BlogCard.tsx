@@ -18,11 +18,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, onView, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
+      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group h-full flex flex-col"
       onClick={() => onView(post)}
       aria-label={`Read more: ${post.title}`}
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-56 overflow-hidden">
         <img
           src={post.coverImageUrl}
           alt={post.title}
@@ -32,44 +32,53 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, onView, index }) => {
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-accent1 transition-colors">
+      <div className="p-8 flex-1 flex flex-col">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-accent1 transition-colors">
           {post.title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
+        <p className="text-gray-600 mb-6 text-base line-clamp-3 flex-grow">{post.excerpt}</p>
         
-        <div className="flex flex-wrap gap-2 mb-4">
-          {post.tags.map((tag) => (
+        <div className="flex flex-wrap gap-2 mb-6">
+          {post.tags.slice(0, 3).map((tag) => (
             <span 
               key={tag}
-              className="px-2 py-1 text-xs font-medium text-accent1 bg-accent1/10 rounded-full"
+              className="px-3 py-1.5 text-sm font-medium text-accent1 bg-accent1/10 rounded-full hover:bg-accent1/20 transition-colors"
             >
               {tag}
             </span>
           ))}
         </div>
         
-        <div className="flex items-center justify-between text-sm text-gray-500 pt-2 border-t border-gray-100">
-
-          <div className="flex items-center">
-            <span className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden mr-2">
-              <img 
-                src={post.author.avatarUrl} 
-                alt={post.author.name}
-                className="w-8 h-8 object-cover"
-              />
-            </span>
-            <span>{post.author.name}</span>
+        <div className="mt-auto">
+          <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
+            <div className="flex items-center">
+              <span className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden mr-3 border-2 border-white shadow-sm">
+                <img 
+                  src={post.author.avatarUrl} 
+                  alt={post.author.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = '/images/placeholder-avatar.png'; // Fallback image
+                  }}
+                />
+              </span>
+              <div>
+                <div className="font-medium text-gray-900">{post.author.name}</div>
+                <div className="text-xs text-gray-500">{post.author.role}</div>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="font-medium text-gray-700">{format(new Date(post.publishedAt), 'MMM d, yyyy')}</div>
+              <div className="text-xs text-gray-400">{post.readTime} min read</div>
+            </div>
           </div>
-          <div className="text-right">
-            <div>{format(new Date(post.publishedAt), 'MMM d, yyyy')}</div>
-            <div className="text-xs">{post.readTime} min read</div>
+          <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-100">
+            <ReactionButton postId={post.id} />
+            <CommentSection postId={post.id} />
+            <ShareButton postUrl={`${window.location.origin}/blog/${post.slug}`} />
           </div>
-        </div>
-        <div className="flex items-center justify-around pt-4 mt-4 border-t border-gray-100">
-          <ReactionButton postId={post.id} />
-          <CommentSection postId={post.id} />
-          <ShareButton postUrl={`${window.location.origin}/blog/${post.slug}`} />
         </div>
       </div>
     </motion.article>

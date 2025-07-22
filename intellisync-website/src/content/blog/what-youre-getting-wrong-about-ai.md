@@ -2,11 +2,11 @@
 title: "What You're Getting Wrong About AI"
 publishedAt: "2025-06-18"
 author:
-  name: "Christopher June"
-  role: "Strategic Visionary Leader"
-  avatarUrl: "/images/authors/christopher-june.png"
+  name: "Chris June"
+  role: "Founder & Lead AI Architect"
+  avatarUrl: "/assets/images/Chris.jpg"
 excerpt: "AI Myths Are Holding You Back – It's Time to Think Again. Unpack the most common misconceptions about AI and see it for what it really is: a powerful tool to empower your organization."
-coverImageUrl: "/images/blog/ai-myths.jpg"
+coverImageUrl: "/assets/images/blog/ai-myths.png"
 tags: ["AIForBusiness", "DigitalTransformation", "FutureOfWork", "AILeadership", "HumanCenteredAI", "AIAdoption", "AIMyths", "ChangeLeadership"]
 readTime: 15
 whyItMatters: "Dispelling common AI myths is crucial for leaders to make informed decisions and harness AI's true potential without fear."

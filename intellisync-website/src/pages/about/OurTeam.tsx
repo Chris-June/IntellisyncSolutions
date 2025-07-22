@@ -4,22 +4,17 @@ const TEAM = [
   {
     name: "Chris June",
     role: "Founder & Lead AI Architect",
-    img: "/assets/team/chris.jpg",
+    img: "/assets/images/Chris.jpg",
   },
   {
     name: "Aimee June",
     role: "Co-Founder & COO",
-    img: "/assets/team/aimee.jpg",
-  },
-  {
-    name: "Courtney June",
-    role: "Marketing Development & CMO",
-    img: "/assets/team/courtney.jpg",
+    img: "/assets/images/Aimee.jpg",
   },
   {
     name: "Abbey June",
     role: "Design, Testing & QC",
-    img: "/assets/team/abbey.jpg",
+    img: "", // Will be updated later
   },
 ];
 
@@ -35,7 +30,7 @@ export default function OurTeam() {
         >
           Meet Our Team
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-5xl mx-auto">
           {TEAM.map((member, idx) => (
             <motion.div
               key={member.name}

@@ -2,11 +2,11 @@
 title: "AI and Humanity: Empathy, Identity, and Human-Centric Integration"
 publishedAt: "2025-03-20"
 author:
-  name: "Christopher June"
-  role: "Strategic Visionary Leader"
-  avatarUrl: "/images/authors/christopher-june.png"
+  name: "Chris June"
+  role: "Founder & Lead AI Architect"
+  avatarUrl: "/assets/images/Chris.jpg"
 excerpt: "How can AI amplify our empathy, creativity, and sense of self—while organizations adopt it in a way that keeps humans at the center? Explore expert insights, case studies, and best practices for human-centric AI integration."
-coverImageUrl: "/images/blog/ai-humanity.jpg"
+coverImageUrl: "/assets/images/blog/ai-humanity.png"
 tags: ["HumanCentricAI", "AIEthics", "Empathy", "Creativity", "Identity", "AIAdoption"]
 readTime: 18
 whyItMatters: "As AI weaves itself into every aspect of life and work, leaders must ensure it enriches rather than erodes human qualities and agency."

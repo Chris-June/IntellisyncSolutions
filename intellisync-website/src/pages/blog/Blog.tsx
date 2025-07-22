@@ -208,7 +208,7 @@ const Blog: React.FC = () => {
           {/* Blog Grid */}
           {filteredPosts.length > 0 ? (
             <div className="space-y-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {paginatedPosts.map((post: BlogPost, index: number) => (
                   <BlogCard 
                     key={post.id} 

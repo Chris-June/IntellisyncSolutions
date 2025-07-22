@@ -10,7 +10,7 @@ const PricingHero = () => (
     
     <div className="relative z-10">
       <motion.h1
-        className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-tr from-accent1 via-cta to-white bg-clip-text text-transparent drop-shadow-[0_4px_32px_rgba(76,91,255,0.45)] animate-gradient-x"
+        className="text-5xl pb-4 md:text-6xl font-extrabold mb-6 bg-gradient-to-tr from-accent1 via-cta to-white bg-clip-text text-transparent drop-shadow-[0_4px_32px_rgba(76,91,255,0.45)] animate-gradient-x"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}

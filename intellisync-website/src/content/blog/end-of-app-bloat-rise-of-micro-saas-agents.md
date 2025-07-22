@@ -2,11 +2,11 @@
 title: "The End of App Bloat and Rise of Micro-SaaS Agents"
 publishedAt: "2025-06-11"
 author:
-  name: "Christopher June"
-  role: "Strategic Visionary Leader"
-  avatarUrl: "/images/authors/christopher-june.png"
+  name: "Chris June"
+  role: "Founder & Lead AI Architect"
+  avatarUrl: "/assets/images/Chris.jpg"
 excerpt: "Discover how Micro-SaaS and AI agents are revolutionizing enterprise software by cutting through the bloat of traditional SaaS stacks, saving millions, and boosting productivity."
-coverImageUrl: "/images/blog/end-of-app-bloat.jpg"
+coverImageUrl: "/assets/images/blog/end-of-app-bloat.png"
 tags: ["AI", "SaaS", "Productivity", "DigitalTransformation", "MicroSaaS", "AIagents", "EnterpriseTech"]
 readTime: 12
 whyItMatters: "As enterprises struggle with bloated software stacks and wasted SaaS spending, understanding the shift to lean, AI-powered micro-tools is crucial for staying competitive and cost-efficient."

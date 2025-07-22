@@ -2,11 +2,11 @@
 title: "From Data Overwhelm to Confident Decisions: How AI Helps Small Businesses"
 publishedAt: "2025-05-04"
 author:
-  name: "Christopher June"
-  role: "Strategic Visionary Leader"
-  avatarUrl: "/images/authors/christopher-june.png"
+  name: "Chris June"
+  role: "Founder & Lead AI Architect"
+  avatarUrl: "/assets/images/Chris.jpg"
 excerpt: "Discover how AI is transforming data analysis for small businesses, turning overwhelming numbers into clear, actionable insights that drive confident decision-making."
-coverImageUrl: "/images/blog/data-overwhelm-to-confidence.jpg"
+coverImageUrl: "/assets/images/blog/big-data.png"
 tags: ["AI", "SmallBusiness", "DataAnalytics", "DecisionMaking", "BusinessIntelligence", "Productivity"]
 readTime: 12
 whyItMatters: "Small businesses are drowning in data but starving for insights. AI-powered tools are leveling the playing field, helping small business owners make data-driven decisions without needing to be data scientists."

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../lib/utils';
 import { Button } from './ui/Button';
 import { Textarea } from './ui/Textarea';
-import { X, Trash2 } from 'lucide-react';
+import { X, Trash2, BotMessageSquare } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import SyntherionResponse from './ui/SyntherionResponse';
 import { getPricingOverview } from '../data/chatPricingContext';
@@ -167,7 +167,7 @@ export const ChatInput: React.FC<ChatInputProps & { eventContext?: string }> = (
             size="icon"
             className="rounded-full relative z-10 shadow-lg hover:scale-105 active:scale-95 transition-transform duration-200"
           >
-            <img src="/assets/images/Chat%20Icon.png" alt="Chat Icon" className="w-5 h-5" />
+            <BotMessageSquare className="w-5 h-5" />
           </Button>
         </div>
       </div>
@@ -429,7 +429,7 @@ export const StickyChat: React.FC<StickyChatProps> = ({ onSend, eventContext }) 
             onClick={() => setOpen(true)}
             aria-label="Open chat"
           >
-            <img src="/assets/images/Chat%20Icon.png" alt="Chat Icon" className="w-12 h-12" />
+            <BotMessageSquare className="w-12 h-12" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -449,7 +449,7 @@ export const StickyChat: React.FC<StickyChatProps> = ({ onSend, eventContext }) 
             <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-t-3xl">
               <div className="flex items-center gap-2">
                 <span className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
-                  <img src="/assets/images/Chat%20Icon.png" alt="Chat Icon" className="w-8 h-8" />
+                  <BotMessageSquare className="w-8 h-8" />
                 </span>
                 <span className="font-semibold text-lg text-black dark:text-white">Intellisync</span>
               </div>
@@ -592,7 +592,7 @@ export const StickyChat: React.FC<StickyChatProps> = ({ onSend, eventContext }) 
                 size="icon"
                 className="rounded-full"
               >
-                <img src="/assets/images/Chat%20Icon.png" alt="Chat Icon" className="w-5 h-5" />
+                <BotMessageSquare className="w-5 h-5" />
               </Button>
             </form>
           </motion.div>

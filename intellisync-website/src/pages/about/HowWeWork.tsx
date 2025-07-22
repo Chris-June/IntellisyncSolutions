@@ -6,7 +6,7 @@ const PROCESS = [
     icon: Brain,
     title: "AI Systems",
     desc: "We design and build comprehensive AI systems—integrating custom models, data pipelines, and deployment infrastructure—to deliver intelligent solutions that scale with your goals.",
-    img: "/assets/images/AISystems.png",
+    img: "/assets/images/AIsystems.png",
   },
   {
     icon: Settings,
