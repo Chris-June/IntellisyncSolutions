@@ -124,7 +124,7 @@ const Blog: React.FC = () => {
       <main className="container mx-auto px-4 py-12">
         <section className="mb-16 text-center">
           <motion.h1 
-            className="text-4xl md:text-6xl font-extrabold bg-gradient-to-tr from-cta via-accent1 to-white bg-clip-text text-transparent mb-4 drop-shadow-lg"
+            className="text-4xl pb-4 md:text-6xl font-extrabold bg-gradient-to-tr from-cta via-accent1 to-white bg-clip-text text-transparent mb-4 drop-shadow-lg"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}

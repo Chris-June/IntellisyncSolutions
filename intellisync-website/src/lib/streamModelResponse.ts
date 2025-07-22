@@ -41,9 +41,7 @@ export async function streamModelResponse(userPrompt: string, eventContext?: str
     body: JSON.stringify({ 
       messages,
       sessionId,
-      // Pass default configuration values
-      temperature: 0.7,
-      max_tokens: 2000
+      // Server will use its default temperature and token limits.
     }),
     signal: controller.signal,
   });

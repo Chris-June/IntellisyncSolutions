@@ -8,6 +8,7 @@ type BaseResponse = {
   takeaway: string;
   reasoning?: string; // Optional reasoning field for all response types
   internal_link?: string;
+  next_step?: string;
 };
 
 type StandardResponse = BaseResponse & {
@@ -129,6 +130,16 @@ const StandardResponseView: React.FC<{ data: StandardResponse; animate: boolean 
             </li>
           ))}
         </motion.ul>
+      )}
+
+      {data.next_step && (
+        <motion.div 
+          className="mt-6 p-4 bg-background/50 rounded-lg"
+          variants={animate ? item : undefined}
+        >
+          <h3 className="font-semibold text-accent2 mb-2">Next Step</h3>
+          <p className="text-gray-200">{data.next_step}</p>
+        </motion.div>
       )}
       
       <motion.div 
