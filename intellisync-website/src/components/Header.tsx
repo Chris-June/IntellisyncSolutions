@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Info, Package, DollarSign, Percent, Bot, Mail, Home as HomeIcon, Menu, X, ShoppingBag } from 'lucide-react';
+import { Info, Package, DollarSign, Bot, Mail, Home as HomeIcon, Menu, X, ShoppingBag, BookOpen } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +54,10 @@ const Header: React.FC = () => {
               <Info className="w-5 h-5 text-accent1" />
               <span>About</span>
             </a>
+            <a href="/blog" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
+              <BookOpen className="w-5 h-5 text-accent1" />
+              <span>Blog</span>
+            </a>
             <a href="/products" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
               <Package className="w-5 h-5 text-accent1" />
               <span>Products</span>
@@ -61,10 +65,6 @@ const Header: React.FC = () => {
             <a href="/pricing" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
               <DollarSign className="w-5 h-5 text-accent1" />
               <span>Pricing</span>
-            </a>
-            <a href="/promotions" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
-              <Percent className="w-5 h-5 text-accent1" />
-              <span>Promo</span>
             </a>
             <a href="/gptbuilder" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
               <Bot className="w-5 h-5 text-accent1" />
@@ -114,6 +114,12 @@ const Header: React.FC = () => {
             <Info className="w-5 h-5 text-accent1" /> About
           </a>
           <a
+            href="/blog"
+            className="flex items-center gap-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >
+            <BookOpen className="w-5 h-5 text-accent1" /> Blog
+          </a>
+          <a
             href="/products"
             className="flex items-center gap-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
@@ -124,12 +130,6 @@ const Header: React.FC = () => {
             className="flex items-center gap-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             <DollarSign className="w-5 h-5 text-accent1" /> Pricing
-          </a>
-          <a
-            href="/promotions"
-            className="flex items-center gap-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            <Percent className="w-5 h-5 text-accent1" /> Promo
           </a>
           <a
             href="/gptbuilder"
