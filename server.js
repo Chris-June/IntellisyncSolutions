@@ -199,9 +199,9 @@ const openai = new OpenAI({ apiKey: process.env.VITE_OPENAI_API_KEY });
 // Default AI configuration
 const DEFAULT_AI_CONFIG = {
   model: 'gpt-4o',
-  temperature: 0.2,
+  temperature: 0.8,
   max_tokens: 10000,
-  top_p: .8,
+  // top_p: .8,
   frequency_penalty: .5,
   presence_penalty: .5
 };
