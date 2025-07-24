@@ -134,11 +134,11 @@ const StandardResponseView: React.FC<{ data: StandardResponse; animate: boolean 
 
       {data.next_step && (
         <motion.div 
-          className="mt-6 p-4 bg-background/50 rounded-lg"
+          className="mt-6 p-4 bg-accent1/10 border border-accent1/20 rounded-lg"
           variants={animate ? item : undefined}
         >
-          <h3 className="font-semibold text-accent2 mb-2">Next Step</h3>
-          <p className="text-gray-200">{data.next_step}</p>
+          <h3 className="font-semibold text-accent1 mb-2">Next Step</h3>
+          <p className="text-white">{data.next_step}</p>
         </motion.div>
       )}
       
@@ -161,7 +161,7 @@ const StandardResponseView: React.FC<{ data: StandardResponse; animate: boolean 
               'font-bold rounded-md'
             )}
           >
-            Read More Here
+            Click Here
           </a>
         </motion.div>
       )}

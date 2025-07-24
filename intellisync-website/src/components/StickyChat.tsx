@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../lib/utils';
 import { Button } from './ui/Button';
 import { Textarea } from './ui/Textarea';
-import { X, Trash2, BotMessageSquare } from 'lucide-react';
+import { Minus, Trash2, BotMessageSquare } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import SyntherionResponse from './ui/SyntherionResponse';
 import { getPricingOverview } from '../data/chatPricingContext';
@@ -458,7 +458,7 @@ export const StickyChat: React.FC<StickyChatProps> = ({ onSend, eventContext }) 
                   <Trash2 className="w-5 h-5 text-accent1" />
                 </Button>
                 <Button size="icon" variant="ghost" onClick={() => setOpen(false)} aria-label="Close chat">
-                  <X className="w-5 h-5 text-accent1" />
+                  <Minus className="w-5 h-5 text-accent1" />
                 </Button>
               </div>
             </div>
@@ -476,7 +476,7 @@ export const StickyChat: React.FC<StickyChatProps> = ({ onSend, eventContext }) 
             <div className="flex-1 overflow-y-auto px-4 py-2 space-y-2 custom-scrollbar">
               {messages.length === 0 && !loading && (
                 <div className="text-center text-gray-400 text-sm mt-8">
-                  Talk with Intellisync!
+                  Ask Intellisync!
                 </div>
               )}
               {messages.map((msg, i) => (
