@@ -578,7 +578,7 @@ Takeaway → Your calendar’s new overlord—benevolent, I promise.
  
 // ===================  END SYSTEM PROMPT  =================== //
 
-// Streaming endpoint for GPT-4.1-nano
+// Streaming endpoint for GPT-4o-mini
 app.post('/api/ai/stream', async (req, res) => {
   try {
     const { messages, max_tokens, temperature, sessionId } = req.body;
