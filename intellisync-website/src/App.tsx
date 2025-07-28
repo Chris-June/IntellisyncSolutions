@@ -22,6 +22,7 @@ import { streamModelResponse } from "./lib/streamModelResponse";
 
 import { AIContextProvider, useAIContext } from './context/AIContext';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { StickyChat } from "./components/StickyChat";
 import { TrackPageView } from './utils/analytics';
 // Helper component to provide eventContext from location
@@ -51,6 +52,7 @@ function App() {
             return event;
           }}
         />
+        <SpeedInsights />
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
