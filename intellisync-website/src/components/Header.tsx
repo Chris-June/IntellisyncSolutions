@@ -74,6 +74,10 @@ const Header: React.FC = () => {
               <ShoppingBag className="w-5 h-5 text-accent1" />
               <span>Store</span>
             </a>
+            <a href="/contact" className="flex items-center gap-2 text-gray-100 hover:text-accent1 transition-colors px-3 py-2">
+              <Mail className="w-5 h-5 text-accent1" />
+              <span>Contact</span>
+            </a>
           </nav>
         </div>
 
@@ -144,10 +148,10 @@ const Header: React.FC = () => {
             <ShoppingBag className="w-5 h-5 text-accent1" /> Store
           </a>
           <a
-            href="/waitlist"
-            className="mt-4 flex items-center justify-center gap-2 bg-accent1 hover:bg-accent1/90 text-white px-4 py-2 rounded-md text-base font-medium transition-colors"
+            href="/contact"
+            className="flex items-center gap-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
-            <Mail className="w-5 h-5" /> Contact Us
+            <Mail className="w-5 h-5 text-accent1" /> Contact
           </a>
         </div>
       </div>

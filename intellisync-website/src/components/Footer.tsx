@@ -82,6 +82,12 @@ const Footer: React.FC = () => {
             <a href="/blog" className="flex items-center gap-2 hover:text-accent1 transition-colors group">
               <FileText size={16} className="text-accent1 group-hover:translate-x-1 transition-transform" /> Blog
             </a>
+            <a href="/contact" className="flex items-center gap-2 hover:text-accent1 transition-colors group">
+              <Mail size={16} className="text-accent1 group-hover:translate-x-1 transition-transform" /> Contact
+            </a>
+            <a href="/waitlist" className="flex items-center gap-2 hover:text-accent1 transition-colors group">
+              <Mail size={16} className="text-accent1 group-hover:translate-x-1 transition-transform" /> Join Waitlist
+            </a>
           </nav>
         </div>
         

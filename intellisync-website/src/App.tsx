@@ -5,6 +5,7 @@ import Pricing from './pages/Pricing/PricingPage';
 import StorePage from './pages/store/StorePage';
 import AppPage from './pages/AppPage';
 import PromotionsPage from './pages/promotions/PromotionsPage';
+import ContactPage from './pages/contact/ContactPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import DisclaimerPage from "./pages/disclaimer";
@@ -50,6 +51,7 @@ function App() {
             <Route path="/store" element={<StorePage />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <ChatWithContext />
         </BrowserRouter>
