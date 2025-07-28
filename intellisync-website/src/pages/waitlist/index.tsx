@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTracking } from '../../utils/analytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -17,7 +18,7 @@ import EmailCapture from '../../components/waitlist/EmailCapture';
 import SuccessScreen from '../../components/waitlist/SuccessScreen';
 
 // Using a placeholder for now - replace with actual logo path
-const logo = '/logo.svg';
+const logo = '../../assets/logo.png';
 
 const WaitlistPage: React.FC = () => {
   // State for tracking the current step and variant
@@ -102,6 +103,8 @@ const WaitlistPage: React.FC = () => {
     return answer ? answer.answer : undefined;
   };
 
+  const { trackFormSubmission, trackButtonClick } = useTracking();
+
   // Handle email submission
   const handleEmailSubmit = async (submittedEmail: string, submittedName: string) => {
     if (!variant || !submittedName || !submittedName.trim()) return;
@@ -119,19 +122,53 @@ const WaitlistPage: React.FC = () => {
       answers
     };
     
+    // Track form start as a button click event
+    trackButtonClick('Waitlist Form Started', 'Waitlist', {
+      variant,
+      nameLength: submittedName.length,
+      answerCount: answers.length,
+      eventType: 'form_started'
+    });
+    
     try {
       // Submit to API
       const result = await waitlistApi.submitWaitlist(submissionData);
       
       if (result.success) {
+        // Track successful submission
+        trackFormSubmission('Waitlist Form', 'success', {
+          variant,
+          nameLength: submittedName.length,
+          answerCount: answers.length,
+          answers: JSON.stringify(answers.map(a => ({
+            stepId: a.stepId,
+            answerType: typeof a.answer === 'string' ? 'text' : 
+                        Array.isArray(a.answer) ? 'multi-select' : 'other'
+          })))
+        });
+        
         // Clear localStorage on successful submission
         waitlistStorage.clearProgress();
         setIsSubmitted(true);
       } else {
-        // Handle error (in a real app, you'd show an error message)
+        // Track submission failure
+        trackFormSubmission('Waitlist Form', 'error', {
+          variant,
+          error: result.message || 'Unknown error',
+          nameLength: submittedName.length,
+          answerCount: answers.length
+        });
         console.error('Submission failed:', result.message);
       }
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      // Track error
+      trackFormSubmission('Waitlist Form', 'error', {
+        variant,
+        error: errorMessage,
+        nameLength: submittedName.length,
+        answerCount: answers.length
+      });
       console.error('Error submitting form:', error);
     } finally {
       setIsLoading(false);

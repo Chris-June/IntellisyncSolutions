@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Button } from '../../components/ui/Button';
 import { Mail } from 'lucide-react';
+import { TrackedButton } from '../../components/TrackedButton';
 
 const CTA = () => (
   <section className="relative py-16 text-center overflow-hidden">
@@ -40,11 +40,23 @@ const CTA = () => (
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a href="/contact">
-            <Button variant="default" size="lg" className="flex items-center gap-2 px-8 py-6 text-lg">
-              <Mail className="w-5 h-5 text-accent2" /> Get Started
-            </Button>
-          </a>
+          <TrackedButton
+            as="a"
+            href="/contact"
+            trackingName="Get Started"
+            trackingSection="Pricing CTA"
+            variant="primary"
+            size="lg"
+            className="flex items-center gap-2 px-8 py-6 text-lg"
+            trackingProps={{
+              ctaType: 'primary',
+              destination: '/contact',
+              source: 'pricing_page_cta'
+            }}
+            icon={<Mail className="w-5 h-5" />}
+          >
+            Get Started
+          </TrackedButton>
         </motion.div>
       </motion.div>
     </div>

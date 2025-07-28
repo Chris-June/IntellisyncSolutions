@@ -33,3 +33,4 @@ dist-ssr
 *.env.*
 
 # Do not commit secrets or API keys!
+.vercel

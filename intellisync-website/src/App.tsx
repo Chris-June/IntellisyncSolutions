@@ -21,32 +21,52 @@ import ProductsPage from './pages/products/ProductsPage';
 import { streamModelResponse } from "./lib/streamModelResponse";
 
 import { AIContextProvider, useAIContext } from './context/AIContext';
-
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { StickyChat } from "./components/StickyChat";
+import { TrackPageView } from './utils/analytics';
 // Helper component to provide eventContext from location
 function ChatWithContext() {
   const { eventContext } = useAIContext();
   return <StickyChat onSend={streamModelResponse} eventContext={eventContext} />;
 }
 
+// Track page views for all routes
+const TrackedPage = ({ children, name }: { children: React.ReactNode; name: string }) => {
+  return (
+    <>
+      <TrackPageView name={name} />
+      {children}
+    </>
+  );
+};
+
 function App() {
   return (
     <AIContextProvider>
       <HelmetProvider>
+        <Analytics 
+          mode="production"
+          beforeSend={(event) => {
+            // You can add custom logic here to filter or modify events
+            return event;
+          }}
+        />
+        <SpeedInsights />
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/mnemosys-case-study" element={<MnemosysCaseStudyPage />} />
-            <Route path="/apps/:slug" element={<AppPage />} />
-            <Route path="/promotions" element={<PromotionsPage />} />
-            <Route path="/gptbuilder" element={<GPTBuilder />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/waitlist" element={<WaitlistPage />} />
-            <Route path="/disclaimer" element={<DisclaimerPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/" element={<TrackedPage name="Home"><Home /></TrackedPage>} />
+            <Route path="/about" element={<TrackedPage name="About"><About /></TrackedPage>} />
+            <Route path="/faq" element={<TrackedPage name="FAQ"><FAQ /></TrackedPage>} />
+            <Route path="/mnemosys-case-study" element={<TrackedPage name="Mnemosys Case Study"><MnemosysCaseStudyPage /></TrackedPage>} />
+            <Route path="/apps/:slug" element={<TrackedPage name="App Detail"><AppPage /></TrackedPage>} />
+            <Route path="/promotions" element={<TrackedPage name="Promotions"><PromotionsPage /></TrackedPage>} />
+            <Route path="/gptbuilder" element={<TrackedPage name="GPT Builder"><GPTBuilder /></TrackedPage>} />
+            <Route path="/pricing" element={<TrackedPage name="Pricing"><Pricing /></TrackedPage>} />
+            <Route path="/waitlist" element={<TrackedPage name="Waitlist"><WaitlistPage /></TrackedPage>} />
+            <Route path="/disclaimer" element={<TrackedPage name="Disclaimer"><DisclaimerPage /></TrackedPage>} />
+            <Route path="/privacy" element={<TrackedPage name="Privacy Policy"><PrivacyPage /></TrackedPage>} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/store" element={<StorePage />} />
             <Route path="/products" element={<ProductsPage />} />
