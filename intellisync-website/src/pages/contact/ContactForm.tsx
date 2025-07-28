@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import { TrackedForm } from '../../components/TrackedForm';
+import { useTracking } from '../../utils/analytics';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +21,9 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const { trackFormSubmission } = useTracking();
+
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Construct the mailto link with form data
@@ -29,6 +33,16 @@ const ContactForm: React.FC = () => {
       `Email: ${formData.email}\n\n` +
       `Message:\n${formData.message}`
     );
+    
+    // Track form submission
+    trackFormSubmission('Contact Form', 'success', {
+      formFields: JSON.stringify({
+        name: formData.name ? 'filled' : 'empty',
+        email: formData.email ? 'filled' : 'empty',
+        subject: formData.subject ? 'filled' : 'empty',
+        message: formData.message ? 'filled' : 'empty'
+      })
+    });
     
     // Open default email client
     window.location.href = `mailto:Chris@intellisync.ca?subject=${subject}&body=${body}`;
@@ -44,10 +58,15 @@ const ContactForm: React.FC = () => {
     
     // Reset success message after 5 seconds
     setTimeout(() => setSubmitStatus('idle'), 5000);
-  };
+    return true;
+  }, [formData, trackFormSubmission]);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <TrackedForm 
+      formName="Contact Form"
+      onTrackedSubmit={handleSubmit}
+      className="max-w-4xl mx-auto px-4 py-12"
+    >
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
@@ -184,7 +203,7 @@ const ContactForm: React.FC = () => {
           </motion.div>
         </form>
       </motion.div>
-    </div>
+    </TrackedForm>
   );
 };
 
