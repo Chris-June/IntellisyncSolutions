@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Button } from '../../components/ui/Button';
 
 export type PromotionCardProps = {
@@ -11,24 +11,27 @@ export type PromotionCardProps = {
 };
 
 const PromotionCard: React.FC<PromotionCardProps> = ({ title, description, image, ctaText = 'Learn More', index = 0 }) => {
-  // Card animation variants
-  const cardVariants = {
+  // Card animation variants with proper typing
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
+    visible: (i: number) => ({
       opacity: 1, 
       y: 0,
       transition: { 
         duration: 0.5, 
-        ease: 'easeOut',
-        delay: index * 0.1 // Staggered delay based on index
+        ease: [0.16, 1, 0.3, 1], // Cubic bezier array for easeOutExpo
+        delay: i * 0.1 // Staggered delay based on index
       } 
-    }
+    })
   };
   
   return (
     <motion.div 
       className="bg-gradient-to-br from-[#1a1a2e]/90 to-[#090d1f]/90 rounded-xl overflow-hidden shadow-xl border border-accent1/20 hover:border-accent1/50 transition-all duration-300 flex flex-col h-full"
       variants={cardVariants}
+      custom={index}
+      initial="hidden"
+      animate="visible"
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
     >
       {image && image !== '' && (
