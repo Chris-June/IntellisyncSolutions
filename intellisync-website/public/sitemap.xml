@@ -10,144 +10,150 @@
   <!-- ========== MAIN PAGES ========== -->
   <url>
     <loc>https://intellisync.io/</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://intellisync.io/pricing</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/promotions</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/gptbuilder</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/faq</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/about</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://intellisync.io/products</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- ========== ABOUT PAGES ========== -->
   <url>
     <loc>https://intellisync.io/about/how-we-work</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/about/team</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/about/mission</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- ========== PRODUCTS PAGES ========== -->
   <url>
     <loc>https://intellisync.io/products/ai-solutions</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/products/technology</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intellisync.io/products/case-studies</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/products/case-studies/mnemosys</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- ========== BLOG PAGES ========== -->
   <url>
     <loc>https://intellisync.io/blog</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- ========== LEGAL PAGES ========== -->
   <url>
     <loc>https://intellisync.io/terms</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://intellisync.io/privacy</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://intellisync.io/disclaimer</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <!-- ========== OTHER PAGES ========== -->
   <url>
+    <loc>https://intellisync.io/blog/youre-not-a-marketing-expert-what-you-need-to-know</loc>
+    <lastmod>2025-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://intellisync.io/blog/what-youre-getting-wrong-about-ai</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/blog/from-data-overwhelm-to-confident-decisions</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/blog/end-of-app-bloat-rise-of-micro-saas-agents</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/blog/death-of-seo-rise-of-search-everything-optimization</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intellisync.io/blog/Humanity_2_0</loc>
-    <lastmod>2025-07-01</lastmod>
+    <lastmod>2025-07-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

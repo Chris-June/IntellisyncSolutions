@@ -34,3 +34,4 @@ dist-ssr
 
 # Do not commit secrets or API keys!
 .vercel
+tsconfig.tsbuildinfo

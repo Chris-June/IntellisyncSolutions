@@ -1,30 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-// @ts-ignore - No type definitions available for this module
-import { nodePolyfills } from 'vite-plugin-node-polyfills';
+
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    nodePolyfills({
-      // Explicitly include process polyfill
-      include: ['process'],
-      // Configure globals
-      globals: {
-        process: true,
-        Buffer: true,
-        global: true,
-      },
-      // Exclude problematic modules
-      exclude: ['fs'],
-    }),
-  ],
+  plugins: [react()],
 
   resolve: {
     alias: {
       '@': '/src'
     }
+  },
+  define: {
+    'process.env': {}
   },
   server: {
     proxy: process.env.VITE_API_BASE_URL ? undefined : {
