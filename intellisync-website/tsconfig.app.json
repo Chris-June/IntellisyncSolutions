@@ -26,5 +26,5 @@
   "paths": {
     "@/*": ["src/*"]
   },
-  "include": ["src", "pages/about/HowWeWork.tsx", "pages/about/IntellisyncSolutions.tsx", "pages/about/Mission.tsx", "pages/about/OurTeam.tsx"]
+  "include": ["src", "src/types", "pages/about/HowWeWork.tsx", "pages/about/IntellisyncSolutions.tsx", "pages/about/Mission.tsx", "pages/about/OurTeam.tsx"]
 }
