@@ -43,7 +43,7 @@ const PlanTable = () => {
                 <tr>
                   <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-left">Plan Tier</th>
                   <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Monthly Fee</th>
-                  <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Support</th>
+                  <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Support Tickets</th>
                   <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Updates</th>
                   <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Hours</th>
                   <th className="px-4 py-3 text-sm md:text-base font-semibold text-accent1 text-center">Extras</th>

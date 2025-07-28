@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CustomCTA from "../home/CustomCTA";
 import Mission from "./Mission";
-import OurTeam from "./OurTeam";
+// import OurTeam from "./OurTeam";
 import HowWeWork from "./HowWeWork";
 import IntellisyncSolutions from "./IntellisyncSolutions";
 import SEO from '../../components/SEO';
@@ -32,7 +32,7 @@ const About: React.FC = () => {
       />
       <Header />
       <Mission />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <HowWeWork />
       <IntellisyncSolutions />
       <CustomCTA />
