@@ -7,7 +7,18 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 export default defineConfig({
   plugins: [
     react(),
-    nodePolyfills(),
+    nodePolyfills({
+      // Explicitly include process polyfill
+      include: ['process'],
+      // Configure globals
+      globals: {
+        process: true,
+        Buffer: true,
+        global: true,
+      },
+      // Exclude problematic modules
+      exclude: ['fs'],
+    }),
   ],
 
   resolve: {
